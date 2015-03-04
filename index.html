@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" data-ng-app="tinkApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tink</title>
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0">
+  <link rel="stylesheet" href="bower_components/tink/framework/styles/tink-stad.min.css" /> </head>
+
+<body>
+  <nav data-tink-top-nav="" class="nav-top">
+    <ul class="nav-top-branding">
+      <li class="logo"> <a href="#/" title=""><span>Your project</span></a> </li>
+      <li class="toggle" data-tink-sidenav-collapse="sideNavLeft"> <a href="" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open menu</span></i></a> </li>
+      <li class="app">
+        <h1><a href="#/" title="">Your project</a></h1> </li>
+    </ul>
+  </nav>
+  <aside data-tink-nav-aside="" data-tink-accordion="true" data-tink-toggle-id="sideNavLeft" class="nav-left">
+    <ul class="nav-aside-list" role="sidenav">
+      <li> <a href="#/link1" title="">Link 1</a> </li>
+      <li> <a href="#/link2" title="">Link 2 with subitems</a>
+        <ul>
+          <li><a href="#/link2/subitem1" title="">Subitem 1</a>
+          </li>
+          <li><a href="#/link2/subitem2" title="">Subitem 2</a>
+          </li>
+          <li><a href="#/link2/subitem3" title="">Subitem 3</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <div>
+    <div class="main" role="main" data-ng-view="" data-autoscroll="true">
+      <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['timeline']}]}"></script>
+       <div id="uxplanning" style="width: 1000px; height: 200px;"></div>
+<div>Geschatte eerste vrije resource: 9 maart 2015</div>
+      
+    </div>
+  </div>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/tink/framework/scripts/api.min.js"></script>
+  <script src="bower_components/tink/framework/scripts/tink-directives.min.js"></script>
+  <script>
+    angular.module('tinkApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'tink']);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "Tink",
+  "version": "1.0.1",
+  "main": [
+    "framework/styles/tink.min.css",
+    "framework/scripts/api.min.js",
+    "framework/scripts/tink-directives.min.js"
+  ],
+  "ignore": [
+    ".*",
+    "**/.*",
+    "app/404.html",
+    "app/favicon.ico",
+    "app/images",
+    "app/index.html",
+    "app/robots.txt",
+    "app/scripts",
+    "app/templates",
+    "app/views",
+    "Gemfile",
+    "Gruntfile.js",
+    "package.json",
+    "test",
+    "Tink.sublime-project"
+  ],
+  "dependencies": {
+    "angular": "~1.3.12",
+    "angular-resource": "~1.3.12",
+    "angular-cookies": "~1.3.12",
+    "angular-sanitize": "~1.3.12",
+    "angular-animate": "~1.3.12",
+    "angular-touch": "~1.3.12",
+    "angular-route": "~1.3.12",
+    "jquery": "~2.1.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.12",
+    "angular-scenario": "~1.3.12"
+  },
+  "appPath": "app",
+  "homepage": "https://github.com/Antwerp-Operating-System/sass_css_js_tink",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "cf7e0ced4674af080fdf115a2e0f4c3b917c458f"
+  },
+  "_source": "git://github.com/Antwerp-Operating-System/sass_css_js_tink.git",
+  "_target": "~1.0.1",
+  "_originalSource": "tink",
+  "_direct": true
+}

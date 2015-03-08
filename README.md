@@ -1,2 +1,2 @@
 # duxboard
-A little tool to show availability of the DUX team.
+A tool to manage availability of the DUX team.

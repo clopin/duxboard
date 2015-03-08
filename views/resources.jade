@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Here you will see a list of resources
+  ul
+    each val in resources
+      li= val
+  p Insert a new resource a(href='/new') New
+

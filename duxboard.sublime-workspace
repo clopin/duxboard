@@ -1,0 +1,465 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"time",
+				"timeobject	(?)"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"p",
+				"path	(?)"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
+				"s",
+				"str	{}"
+			],
+			[
+				"f",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"alig",
+				"vertical-align"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"Mont",
+				"Mongo.Collection	new Mongo.Collection(name, [options])"
+			],
+			[
+				"Mongo",
+				"Mongo.Collection	new Mongo.Collection(name, [options])"
+			],
+			[
+				"Mon",
+				"Mongo.Collection	new Mongo.Collection.ObjectID(hexString)"
+			],
+			[
+				"proj",
+				"project"
+			],
+			[
+				"update",
+				"updateVisible"
+			],
+			[
+				"updateVi",
+				"updateVisible"
+			],
+			[
+				"eve",
+				"events	Meteor: Template.myTemplate.events(eventMap)"
+			],
+			[
+				"updateVisi",
+				"updateVisibleState"
+			],
+			[
+				"Session",
+				"Session.set	Meteor: Session.set(key, value)"
+			],
+			[
+				"va",
+				"var"
+			],
+			[
+				"al",
+				"alt	Attr"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"backgrou",
+				"background-position"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"t",
+				"title	Attr"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"sty",
+				"list-style-type"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"bor",
+				"border-color"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"ali",
+				"vertical-align"
+			],
+			[
+				"align",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/kevin/Sites/duxboard"
+	],
+	"file_history":
+	[
+		"/Users/kevin/Sites/duxboard/app.js",
+		"/Users/kevin/Sites/nodeschool/learnyounode/program7.js",
+		"/Users/kevin/Sites/nodeschool/learnyounode/program8.js",
+		"/Users/kevin/Sites/nodeschool/learnyounode/program10.js",
+		"/Users/kevin/Sites/nodeschool/learnyounode/program13.js",
+		"/Users/kevin/Sites/nodeschool/learnyounode/module.js",
+		"/Users/kevin/Sites/nodeschool/learnyounode/program.js",
+		"/Users/kevin/Sites/nodeschool/learnyounode/program11.js",
+		"/Users/kevin/Sites/nodeschool/express/ex8.js",
+		"/Users/kevin/Sites/nodeschool/express/ex7.js",
+		"/Users/kevin/Sites/nodeschool/express/ex6.js",
+		"/Users/kevin/Sites/nodeschool/express/ex5.js",
+		"/Users/kevin/Sites/nodeschool/express/ex4.js",
+		"/Users/kevin/Sites/nodeschool/express/ex3.js",
+		"/Users/kevin/Sites/nodeschool/express/ex2.js",
+		"/Users/kevin/Sites/nodeschool/express/ex1.js",
+		"/Users/kevin/Sites/nodeschool/express/index.html",
+		"/Users/kevin/Sites/duxboard/views/index.jade",
+		"/Users/kevin/Sites/duxboard/index.html",
+		"/Users/kevin/Sites/node-js-getting-started/.env",
+		"/Users/kevin/Sites/node-js-getting-started/package.json",
+		"/Users/kevin/Sites/node-js-getting-started/index.js",
+		"/Users/kevin/Sites/nodeschool/javascripting/javascripting/introduction.js",
+		"/Users/kevin/Sites/nodeschool/javascripting/javascripting/variables.js",
+		"/Users/kevin/Sites/nodeschool/javascripting/javascripting/strings.js",
+		"/Users/kevin/Downloads/encrypted (1).asc",
+		"/Users/kevin/Downloads/nginx-access.log.2",
+		"/Users/kevin/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/kevin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/kevin/Documents/www/tink_demo_2/index.html",
+		"/Users/kevin/Documents/www/tink_demo/index.html",
+		"/Users/kevin/Sites/de_mulder_eu/index.html",
+		"/Users/kevin/Sites/de_mulder_eu/css/main.css",
+		"/Users/kevin/Documents/www/sass_css_js_tinkdocumentation/README.md",
+		"/Users/kevin/Documents/www/de_mulder_eu/index.html",
+		"/Users/kevin/Documents/www/de_mulder_eu/css/main.css",
+		"/Users/kevin/Documents/www/kevindemulder_be/css/main.css",
+		"/Users/kevin/Documents/www/kevindemulder_be/index.html",
+		"/Volumes/VAULT/UX pres/video.html",
+		"/Users/kevin/Downloads/end-to-end-master/README.md",
+		"/Users/kevin/Sites/polymer_duxboard/index.html",
+		"/Users/kevin/Sites/polymer_duxboard/elements/my-element.html",
+		"/Users/kevin/Sites/polymer_duxboard/my-element.html",
+		"/Users/kevin/Downloads/Plex Media Scanner.log.1",
+		"/Users/kevin/Downloads/tink-0.3.1/css/tink-0.3.1.css",
+		"/Users/kevin/Downloads/tink-0.3.1.css",
+		"/Users/kevin/Documents/www/kevindemulder_be/form.html",
+		"/Applications/MAMP/htdocs/kevindemulder.be/index.html",
+		"/Applications/MAMP/htdocs/kevindemulder.be/css/responsive.css",
+		"/Applications/MAMP/htdocs/kevindemulder.be/css/main.css",
+		"/Applications/MAMP/htdocs/kevindemulder.be/contact.html",
+		"/Applications/MAMP/htdocs/kevindemulder.be/css/normalize.css",
+		"/Applications/MAMP/htdocs/kevindemulder.be/main.css",
+		"/Users/kevin/Documents/www/sass_css_js_tink/Tink.sublime-project",
+		"/Users/kevin/Desktop/BE68401902150134_Afschriften_tot_04-10-2014.csv",
+		"/Users/kevin/Desktop/BE10001504615904EUR_280814-041014.csv",
+		"/Users/kevin/Dropbox/usatrip/usatrip-20140804.sql",
+		"/Volumes/USB DISK/filevault recovery key",
+		"/Users/kevin/Desktop/filevault recovery key",
+		"/Volumes/NO NAME/lastpass",
+		"/Users/kevin/Desktop/keybase.txt",
+		"/Volumes/NO NAME/kdemulder@gmail.com_keypair.asc",
+		"/Volumes/NO NAME/clopin_fort9_keys.asc",
+		"/Volumes/NO NAME/Kevin De Mulder mail@kevindemulder.be (0xC94571D2) pub-sec.asc",
+		"/Volumes/NO NAME/digipolis_keys.asc",
+		"/Volumes/NO NAME/passphrase_mails",
+		"/usr/include/apache2/http_vhost.h",
+		"/Users/kevin/Dropbox/Belastingen 2014/todo beslastingen.txt",
+		"/Users/kevin/Documents/Geektool/weather/weather code script.glet",
+		"/Users/kevin/Documents/Geektool/weather/weather image1.glet",
+		"/Users/kevin/Downloads/eloketform.json",
+		"/Volumes/video/Series/Arrow/Season 02/Arrow.S02E10.SD.TV-LOL.nl.srt",
+		"/Volumes/NO NAME/filevault_recovery",
+		"/Users/kevin/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/51408CCC-3798-407D-9516-85C6E60EE9AF/renew_avatars.sh",
+		"/Volumes/video/Series/Glee/Season 04/Glee.S04E04.HDTV.x264-LOL.srt",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
+		"/Users/kevin/Library/Thunderbird/profiles.ini",
+		"/Users/kevin/Downloads/arrow.state.vs.queen.(2013).tv.s02.e07.dut.3cd/Arrow.S02E07.1080p.WEB-DL.DD5.1.H.264-BS.srt",
+		"/Users/kevin/Downloads/arrow.state.vs.queen.(2013).tv.s02.e07.dut.3cd/Arrow.S02E07.720p.HDTV.X264-DIMENSION.srt",
+		"/Users/kevin/Downloads/arrow.state.vs.queen.(2013).tv.s02.e07.dut.3cd/Arrow.S02E07.720p.HDTV.X264-DIMENSION-eng.srt",
+		"/Volumes/NO NAME 1/buffer one time password",
+		"/Volumes/NO NAME 1/Untitled Document~"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"datum",
+			"indent",
+			"value",
+			"email",
+			"100px",
+			"background-color: black;",
+			"40px",
+			";",
+			",",
+			";",
+			",",
+			"h3",
+			"style=\"border: 0px; font-family: Lato, sans-serif; font-size: 16px; outline: 0px; padding: 0px; vertical-align: baseline; list-style-position: initial; list-style-image: initial; color: #2b2b2b; line-height: 24px;\"",
+			"</span></span></div>",
+			"<div style=\"font-family: Arial;\"><span style=\"color: #2b2b2b; font-family: Lato, sans-serif;\"><span style=\"line-height: 24px; font-size: 24px;\"><strong>",
+			"style=\"border: 0px; font-family: inherit; font-style: inherit; outline: 0px; padding: 0px; vertical-align: baseline; color: #24890d;\" ",
+			"<li style=\"border: 0px; font-family: inherit; font-style: inherit; outline: 0px; padding: 0px; vertical-align: baseline;\">"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			",",
+			".",
+			",",
+			".",
+			"h2",
+			"",
+			"</h3>",
+			"<h3>",
+			"",
+			"<li>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "duxboard.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 207.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

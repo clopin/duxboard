@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 	//db.once('open', function (callback) {
 		resourceModel.find().lean().exec(function (err, resourcelist) {
 			//console.log(JSON.stringify(resourcelist));
-			res.render('resources', {title: 'Resources', resources: JSON.stringify(resourcelist)});
+			res.render('resources', {title: 'Resources', resources: JSON.parse(JSON.stringify(resourcelist))});
 		});
 	//});
 });

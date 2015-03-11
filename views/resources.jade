@@ -4,7 +4,7 @@ block content
   h1= title
   p Here you will see a list of resources
   ul
-    each resource in resources
+    for resource in resources
       li=resource.name
   p Insert a 
     a(href='resources/new') new resource

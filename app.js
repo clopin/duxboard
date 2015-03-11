@@ -4,12 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var app = express();
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var resources = require('./routes/resources');
 
-var app = express();
 
 
 // view engine setup
@@ -27,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use(express.urlencoded()); // to support URL-encoded bodies
 
 app.use('/', routes);
-app.use('/users', users);
 app.use('/resources', resources);
 
 // catch 404 and forward to error handler
@@ -61,8 +58,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.post('/newresource', function(req,res){
-    console.log(req.body);
-});
-
 module.exports = app;
+

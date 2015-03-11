@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"resour",
+				"resourceList	[]"
+			],
+			[
 				"time",
 				"timeobject	(?)"
 			],
@@ -195,13 +199,72 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1642,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/layout.jade",
+			"settings":
+			{
+				"buffer_size": 127,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/index.jade",
+			"settings":
+			{
+				"buffer_size": 104,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/newresource.jade",
+			"settings":
+			{
+				"buffer_size": 291,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/resources.jade",
+			"settings":
+			{
+				"buffer_size": 185,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var express = require('express');\nvar router = express.Router();\n\nvar pg = require('pg');\nvar conString = \"postgres://kevin:@localhost/kevin\";\n\nvar resourceList = [];\n\n/* GET resources listing. */\nrouter.get('/', function(req, res, next) {\n\n	var mongoose = require('mongoose');\n	mongoose.connect('mongodb://localhost/test');\n\n	var resource = mongoose.model('resource', { name: String, counter: int });\n\n	var newresource = new Cat({ name: 'Zildjian' });\n	kitty.save(function (err) {\n	  if (err) \n	  	res.writeHead(500, {'content-type': 'text/plain'});\n	    res.end('An error occurred');\n	});\n\n	pg.connect(conString, function(err, client, done) {\n\n	    var handleError = function(err) {\n	      // no error occurred, continue with the request\n	      if(!err) return false;\n\n	      // An error occurred, remove the client from the connection pool.\n	      // A truthy value passed to done will remove the connection from the pool\n	      // instead of simply returning it to be reused.\n	      // In this case, if we have successfully received a client (truthy)\n	      // then it will be removed from the pool.\n	      done(client);\n	      res.writeHead(500, {'content-type': 'text/plain'});\n	      res.end('An error occurred');\n	      return true;\n	    };\n\n	    client.query('SELECT name FROM dux_resources', function(err, result) {\n\n        	// handle an error from the query\n	        if(handleError(err)) return;\n	        resourceList = result.rows;\n	        \n	         for (var i = 0; i < result.rows.length; i++) {\n	         	resourceList[i] = result.rows[i].name\n			 }\n\n		    // return the client to the connection pool for other requests to reuse\n		    done();\n		});\n    });\n	res.render('resources', {title: 'Resources', resources: resourceList})\n});\n\nrouter.get('/new', function(req, res, next) {\n  res.render('newresource')\n}); \n\nrouter.post('/', function(req,res){\n    var mongoose = require('mongoose');\n	mongoose.connect('mongodb://localhost/local');\n\n	var resource = mongoose.model('resource', { name: String, counter: int });\n\n	var newresource = new Cat({ name: req.body.name, counter: req.body.counter });\n	newresource.save(function (err) {\n	  if (err) \n	  	res.writeHead(500, {'content-type': 'text/plain'});\n	    res.end('An error occurred');\n	});\n\n	res.render('resources', {title: 'Resources', resources: resourceList})\n});\n\nmodule.exports = router;\n",
+			"file": "routes/resources.js",
+			"file_size": 2354,
+			"file_write_time": 130704732690000000,
+			"settings":
+			{
+				"buffer_size": 2360,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 347.0,
+		"height": 247.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
 			[
 				"package",
 				"Package Control: Install Package"
@@ -211,7 +274,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 467.0
+		"width": 695.0
 	},
 	"console":
 	{
@@ -232,10 +295,25 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/kevin/Sites/duxboard"
+		"/Users/kevin/Sites/duxboard",
+		"/Users/kevin/Sites/duxboard/bin",
+		"/Users/kevin/Sites/duxboard/bower_components/tink",
+		"/Users/kevin/Sites/duxboard/bower_components/tink/app/styles",
+		"/Users/kevin/Sites/duxboard/bower_components/tink/framework",
+		"/Users/kevin/Sites/duxboard/bower_components/tink/framework/scripts",
+		"/Users/kevin/Sites/duxboard/bower_components/tink/framework/styles",
+		"/Users/kevin/Sites/duxboard/public",
+		"/Users/kevin/Sites/duxboard/public/images",
+		"/Users/kevin/Sites/duxboard/public/javascripts",
+		"/Users/kevin/Sites/duxboard/public/stylesheets",
+		"/Users/kevin/Sites/duxboard/routes",
+		"/Users/kevin/Sites/duxboard/views"
 	],
 	"file_history":
 	[
+		"/Users/kevin/Sites/duxboard/routes/newresource.js",
+		"/Users/kevin/Sites/duxboard/package.json",
+		"/Users/kevin/Sites/duxboard/README.md",
 		"/Users/kevin/Sites/duxboard/app.js",
 		"/Users/kevin/Sites/nodeschool/learnyounode/program7.js",
 		"/Users/kevin/Sites/nodeschool/learnyounode/program8.js",
@@ -335,6 +413,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"function",
+			"');\n",
+			"resources",
+			"Resources",
+			"resources",
+			"kegel",
 			"datum",
 			"indent",
 			"value",
@@ -379,8 +463,179 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1642,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								898,
+								898
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								104,
+								104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/newresource.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								125,
+								125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/resources.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 185,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								83,
+								83
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "routes/resources.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								419,
+								419
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

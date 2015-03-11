@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   p Enter a new resource
-  form(name="newresource", action="/resources", method="post")
+  form(name="newresource", action="/resources/new", method="post")
     input(type="text", name="name")
     input(type="text", name="counter")
     input(type="submit", value="submit")

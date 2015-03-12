@@ -38,8 +38,9 @@ router.post('/', function(req,res){
 		  		res.writeHead(500, {'content-type': 'text/plain'});
 		    	res.end('An error occurred');
 			};
+			getResourceList(req, res)
 		});
-		getResourceList(req, res)
+		
 	//});
 });
 

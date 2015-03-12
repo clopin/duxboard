@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var config_reader = require('yaml-config');
 // Read in the configuration files that we have
-var config_db = config_reader.readConfig('../config/database.yml', process.env.NODE_ENV);
+var config_db = config_reader.readConfig('../config/database.yml');
 
 // Set the globals that are required
 mongoose = require('mongoose');

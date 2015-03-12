@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Here you will see a list of resources
+  ul
+    for project in projects
+      li=project.name
+  p Insert a 
+    a(href='projects/new') New project
+

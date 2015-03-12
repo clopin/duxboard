@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // Set the globals that are required
-mongoose = require('../db.js');
+mongoose  = require('mongoose');
 var projectSchema = mongoose.Schema({name: String, counter: Number});
 var projectModel = mongoose.model('project', projectSchema);
 

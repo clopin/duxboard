@@ -10,7 +10,7 @@ var resourceSchema = mongoose.Schema({name: String, counter: Number});
 var resourceModel = mongoose.model('resource', resourceSchema);
 
 // Connect Mongoose to the db already
-console.log(process.cwd())
+console.log( __dirname );
 mongoose.connect("mongodb://"+ process.env.DB_USER + ":" + process.env.DB_PW + "@" + config_db.mongo.uri);
 
 function getResourceList(req, res) {

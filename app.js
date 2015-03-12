@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var routes = require('./routes/index');
 var resources = require('./routes/resources');
+var projects = require('./routes/projects');
 
 
 
@@ -21,11 +22,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(express.json());       // to support JSON-encoded bodies
-//app.use(express.urlencoded()); // to support URL-encoded bodies
 
 app.use('/', routes);
 app.use('/resources', resources);
+app.use('/projects', projects);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -6,6 +6,8 @@ block content
   ul
     for resource in resources
       li=resource.name
+        form( method="post", action="/resources/delete")
+          input(name="resourceid", type="hidden", value=resource._id)
+          input(id="delete", value="X", class="btn-danger", type="submit")
   p Insert a 
     a(href='resources/new') new resource
-

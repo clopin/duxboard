@@ -17,4 +17,10 @@ router.post('/', function(req,res){
     resource.insertResource({ name: req.body.name, counter: req.body.counter }, function () {resource.getResourceList(res)});
 });
 
+router.post('/delete', function(req, res) {
+    resource.deleteResource(req.body.resourceid, function () {
+        res.redirect('/resources')
+    });
+});
+
 module.exports = router;

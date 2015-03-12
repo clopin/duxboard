@@ -18,5 +18,11 @@ router.post('/', function(req,res){
     project.insertProject({ name: req.body.name, counter: req.body.counter }, function () {project.getProjectList(res)});
 });
 
+router.post('/delete', function(req, res) {
+    project.deleteProject(req.body.projectid, function () {
+        res.redirect('/projects')
+    });
+});
+
 // Export router
 module.exports = router;

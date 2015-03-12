@@ -21,5 +21,16 @@ var insertProject = function insertProject(input, callback) {
     });
 };
 
+var deleteProject = function deleteProject(input, callback) {
+    projectModel.remove({_id: input},function (err) {
+        if (err) {
+            res.writeHead(500, {'content-type': 'text/plain'});
+            res.end('An error occurred');
+        }
+        callback();
+    });
+};
+
 module.exports.getProjectList = getProjectList;
 module.exports.insertProject = insertProject;
+module.exports.deleteProject = deleteProject;

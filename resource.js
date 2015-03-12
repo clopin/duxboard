@@ -21,5 +21,16 @@ var insertResource = function insertResource(input, callback) {
     });
 };
 
+var deleteResource = function deleteResource(input, callback) {
+    resourceModel.remove({_id: input},function (err) {
+        if (err) {
+            res.writeHead(500, {'content-type': 'text/plain'});
+            res.end('An error occurred');
+        }
+        callback();
+    });
+};
+
 module.exports.getResourceList = getResourceList;
 module.exports.insertResource = insertResource;
+module.exports.deleteResource = deleteResource;

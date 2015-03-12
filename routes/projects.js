@@ -18,10 +18,21 @@ router.post('/', function(req,res){
     project.insertProject({ name: req.body.name, counter: req.body.counter }, function () {project.getProjectList(res)});
 });
 
+// Delete entry
 router.post('/delete', function(req, res) {
     project.deleteProject(req.body.projectid, function () {
         res.redirect('/projects')
     });
+});
+
+// Render edit form
+router.get('/edit', function(req, res) {
+    project.editProject(req.body.projectid, res);
+});
+
+// Process edit form
+router.post('/edit', function(req,res){
+    project.updateProject({ _id: req.body.projectid}, {name: req.body.name, counter: req.body.counter }, res, function () {res.redirect('/projects')});
 });
 
 // Export router

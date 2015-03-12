@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Edit a resource
+  form(name="updateresource", action="/resources/edit", method="post")
+    input(type="text", name="name", value=resource.name)
+    input(type="text", name="counter", value=resource.counter)
+    input(type="hidden", name="resourceid", value=resource._id)
+    input(type="submit", value="submit")
+  p Back to 
+    a(href='../resources') list

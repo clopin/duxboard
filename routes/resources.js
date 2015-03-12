@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var config_reader = require('yaml-config');
 // Read in the configuration files that we have
-var config_db = config_reader.readConfig('../config/database.yml');
+var config_db = config_reader.readConfig('../config/database.yml', process.env.NODE_ENV);
 
 // Set the globals that are required
 mongoose = require('mongoose');
@@ -10,7 +10,7 @@ var resourceSchema = mongoose.Schema({name: String, counter: Number});
 var resourceModel = mongoose.model('resource', resourceSchema);
 
 // Connect Mongoose to the db already
-mongoose.connect("mongodb://"+ process.env.DB_USER + ":" + process.env.DB_USER + "@"+config_db.mongo.uri);
+mongoose.connect("mongodb://"+ process.env.DB_USER + ":" + process.env.DB_PW + "@" + config_db.mongo.uri);
 
 function getResourceList(req, res) {
 	resourceModel.find().lean().exec(function (err, resourcelist) {

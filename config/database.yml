@@ -9,4 +9,4 @@ production:
   mongo:
     driver: "mongoose"
     uri:    "ds039351.mongolab.com:39351/heroku_app34597789"
-    debug:  false
+    debug:  true

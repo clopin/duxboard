@@ -1,6 +1,6 @@
 {
   "name": "duxboard",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -13,6 +13,7 @@
     "jade": "~1.9.2",
     "mongoose": "^3.8.24",
     "morgan": "~1.5.1",
+    "path": "^0.11.14",
     "serve-favicon": "~2.2.0",
     "yaml-config": "^0.3.0"
   }

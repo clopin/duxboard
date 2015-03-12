@@ -7,13 +7,17 @@ mongoose.connect('mongodb://localhost/duxboard');
 //var db = mongoose.connection;
 //db.on('error', console.error.bind(console, 'connection error:'));
 
+function getResourceList(req, res) {
+	resourceModel.find().lean().exec(function (err, resourcelist) {
+		//console.log(JSON.stringify(resourcelist));
+		res.render('resources', {title: 'Resources', resources: JSON.parse(JSON.stringify(resourcelist))});
+	});
+}
+
 /* GET resources listing. */
 router.get('/', function(req, res, next) {
 	//db.once('open', function (callback) {
-		resourceModel.find().lean().exec(function (err, resourcelist) {
-			//console.log(JSON.stringify(resourcelist));
-			res.render('resources', {title: 'Resources', resources: JSON.parse(JSON.stringify(resourcelist))});
-		});
+		getResourceList(req, res)
 	//});
 });
 
@@ -21,7 +25,7 @@ router.get('/new', function(req, res, next) {
   res.render('newresource', {title: 'New Resource'})
 }); 
 
-router.post('/new', function(req,res){
+router.post('/', function(req,res){
 	//db.once('open', function (callback) {
 		var newresource = new resourceModel({ name: req.body.name, counter: req.body.counter });
 		newresource.save(function (err) {
@@ -30,7 +34,7 @@ router.post('/new', function(req,res){
 		    	res.end('An error occurred');
 			};
 		});
-		res.render('newresource', {title: 'New Resource', message: 'Succes!'})
+		getResourceList(req, res)
 	//});
 });
 

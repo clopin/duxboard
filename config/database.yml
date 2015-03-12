@@ -1,0 +1,12 @@
+development:
+  mongo:
+    driver: "mongoose"
+    uri:    "mongodb://localhost/duxboard"
+    debug:  true
+
+
+production:
+  mongo:
+    driver: "mongoose"
+    uri:    "mongodb://heroku_app34597789:zOr6$HBfZh@ds039351.mongolab.com:39351/heroku_app34597789"
+    debug:  false

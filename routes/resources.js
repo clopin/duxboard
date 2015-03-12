@@ -1,11 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
+var config_reader = require('yaml-config');
+// Read in the configuration files that we have
+var config_db = config_reader.readConfig('../config/database.yml');
+
+// Set the globals that are required
+mongoose = require('mongoose');
 var resourceSchema = mongoose.Schema({name: String, counter: Number});
 var resourceModel = mongoose.model('resource', resourceSchema);
-mongoose.connect('mongodb://localhost/duxboard');
-//var db = mongoose.connection;
-//db.on('error', console.error.bind(console, 'connection error:'));
+
+// Connect Mongoose to the db already
+mongoose.connect(config_db.mongo.uri);
 
 function getResourceList(req, res) {
 	resourceModel.find().lean().exec(function (err, resourcelist) {

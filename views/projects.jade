@@ -6,6 +6,11 @@ block content
   ul
     for project in projects
       li=project.name
+        form( method="post", action="/projects/delete")
+          input(name="projectid", type="hidden", value=project._id)
+          input(id="delete", value="X", type="submit")
+        form( method="get", action="/projects/edit")
+          input(name="projectid", type="hidden", value=project._id)
+          input(id="edit", value="Edit", type="submit")
   p Insert a 
     a(href='projects/new') New project
-

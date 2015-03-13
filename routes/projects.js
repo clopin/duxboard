@@ -1,38 +1,39 @@
+// Variables
 var express = require('express');
 var router = express.Router();
+var project = require('../project.js');
 
-// Set the globals that are required
-mongoose = require('../db.js');
-var projectSchema = mongoose.Schema({name: String, counter: Number});
-var projectModel = mongoose.model('project', projectSchema);
-
-// Connect Mongoose to the db already
-// mongoose.connect(process.env.MONGOLAB_URI);
-
-function getProjectList(req, res) {
-	projectModel.find().lean().exec(function (err, projectlist) {
-		res.render('projects', {title: 'Projects', projects: JSON.parse(JSON.stringify(projectlist))});
-	});
-}
-
-/* GET project listing. */
+// Render listing
 router.get('/', function(req, res, next) {
-	getProjectList(req, res)
+    project.getProjectList(res)
 });
 
+// Render form for new entry
 router.get('/new', function(req, res, next) {
-  res.render('newproject', {title: 'New Project'})
-}); 
-
-router.post('/', function(req,res){
-	var newproject = new projectModel({ name: req.body.name, counter: req.body.counter });
-	newproject.save(function (err) {
-		if (err) {
-	  		res.writeHead(500, {'content-type': 'text/plain'});
-	    	res.end('An error occurred');
-		};
-		getProjectList(req, res)
-	});
+    res.render('newproject', {title: 'New Project'})
 });
 
+// Process new entry
+router.post('/', function(req,res){
+    project.insertProject({ name: req.body.name, counter: req.body.counter }, function () {project.getProjectList(res)});
+});
+
+// Delete entry
+router.post('/delete', function(req, res) {
+    project.deleteProject(req.body.projectid, function () {
+        res.redirect('/projects')
+    });
+});
+
+// Render edit form
+router.get('/edit', function(req, res) {
+    project.editProject(req.query.projectid, res);
+});
+
+// Process edit form
+router.post('/edit', function(req,res){
+    project.updateProject({ _id: req.body.projectid}, {name: req.body.name, counter: req.body.counter }, res, function () {res.redirect('/projects')});
+});
+
+// Export router
 module.exports = router;

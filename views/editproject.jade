@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Edit a project
+  form(name="updateproject", action="/projects/edit", method="post")
+    input(type="text", name="name", value=project.name)
+    input(type="text", name="counter", value=project.counter)
+    input(type="hidden", name="projectid", value=project._id)
+    input(type="submit", value="submit")
+  p Back to 
+    a(href='../projects') list

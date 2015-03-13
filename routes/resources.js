@@ -1,38 +1,39 @@
+// Variables
 var express = require('express');
 var router = express.Router();
+var resource = require('../resource.js');
 
-// Set the globals that are required
-mongoose = require('../db.js');
-var resourceSchema = mongoose.Schema({name: String, counter: Number});
-var resourceModel = mongoose.model('resource', resourceSchema);
-
-// Connect Mongoose to the db already
-// mongoose.connect(process.env.MONGOLAB_URI);
-
-function getResourceList(req, res) {
-	resourceModel.find().lean().exec(function (err, resourcelist) {
-		res.render('resources', {title: 'Resources', resources: JSON.parse(JSON.stringify(resourcelist))});
-	});
-}
-
-/* GET resources listing. */
-router.get('/', function(req, res, next) {
-	getResourceList(req, res)
+// Render listing
+router.get('/', function(req, res) {
+	resource.getResourceList(res)
 });
 
-router.get('/new', function(req, res, next) {
-  res.render('newresource', {title: 'New Resource'})
-}); 
+// Render form for new entry
+router.get('/new', function(req, res) {
+    res.render('newresource', {title: 'New Resource'})
+});
 
+// Process new entry
 router.post('/', function(req,res){
-	var newresource = new resourceModel({ name: req.body.name, counter: req.body.counter });
-	newresource.save(function (err) {
-		if (err) {
-	  		res.writeHead(500, {'content-type': 'text/plain'});
-	    	res.end('An error occurred');
-		};
-		getResourceList(req, res)
-	});
+    resource.insertResource({ name: req.body.name, counter: req.body.counter }, res, function () {resource.getResourceList(res)});
 });
 
+// Delete entry
+router.post('/delete', function(req, res) {
+    resource.deleteResource(req.body.resourceid, res, function () {
+        res.redirect('/resources')
+    });
+});
+
+// Render edit form
+router.get('/edit', function(req, res) {
+    resource.editResource(req.query.resourceid, res);
+});
+
+// Process edit form
+router.post('/edit', function(req,res){
+    resource.updateResource({ _id: req.body.resourceid}, {name: req.body.name, counter: req.body.counter }, res, function () {res.redirect('/resources')});
+});
+
+// Export router
 module.exports = router;

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Here you will see a list of resources
+  table.table-bordered
+    tr
+      td Resources
+      for user in users
+        td=user.name
+    for day in days
+      tr=day.title
+        for resource in day.resources
+          td=resource.project

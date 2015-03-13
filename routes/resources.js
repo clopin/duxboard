@@ -27,7 +27,7 @@ router.post('/delete', function(req, res) {
 
 // Render edit form
 router.get('/edit', function(req, res) {
-    resource.editResource(req.body.resourceid, res);
+    resource.editResource(req.query.resourceid, res);
 });
 
 // Process edit form

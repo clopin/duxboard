@@ -9,8 +9,8 @@ var getProjectList = function getProjectList(res) {
 };
 
 var editProject = function editProject(input, res) {
-    var project = projectModel.findOne(input).exec(function (err, project) {
-        res.render('editproject', {title: 'Edit Project', resource: JSON.parse(JSON.stringify(project))});
+    projectModel.findOne({ _id: input }).exec(function (err, foundproject) {
+        res.render('editproject', {title: 'Edit Project', project: JSON.parse(JSON.stringify(foundproject))});
     });
 };
 
